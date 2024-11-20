@@ -14,6 +14,10 @@ public class Donor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private User user;
+
     private String cpf;
 
     private String firstName;
@@ -31,6 +35,4 @@ public class Donor {
     private String state;
 
     private String phone;
-
-    private String email;
 }

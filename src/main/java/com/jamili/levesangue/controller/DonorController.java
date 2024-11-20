@@ -25,4 +25,11 @@ public class DonorController {
     public List<Donor> getAllDonors() {
         return donorService.getAllDonors();
     }
+
+
+    @ResponseStatus(HttpStatus.OK)
+    @GetMapping("/{cpf}")
+    public Donor getDonorByCpf(@PathVariable String cpf) {
+        return donorService.getDonorByCpf(cpf);
+    }
 }

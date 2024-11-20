@@ -1,9 +1,6 @@
 package com.jamili.levesangue.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,11 +14,13 @@ public class DonationCenter {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private User user;
+
     private String cnpj;
 
     private String name;
-
-    private String email;
 
     private String phone;
 
@@ -30,4 +29,6 @@ public class DonationCenter {
     private String address;
 
     private String state;
+
+    private String lastDonation;
 }

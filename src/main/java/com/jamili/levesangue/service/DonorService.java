@@ -20,4 +20,8 @@ public class DonorService {
     public List<Donor> getAllDonors() {
         return donorRepository.findAll();
     }
+
+    public Donor getDonorByCpf(String cpf) {
+        return donorRepository.findByCpf(cpf);
+    }
 }

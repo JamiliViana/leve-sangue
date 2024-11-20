@@ -15,3 +15,8 @@ O projeto Leve Sangue é um sistema de gestão para doações de sangue, desenvo
 Este sistema visa facilitar o processo de registro e acompanhamento de doações de sangue, gerenciando informações de doadores e centros de doação de maneira simples e eficiente.
 
 ## Sprint 1: Configuração Inicial e Funcionalidades Básicas
+## Sprint 2: Cadastro e Login de Usuários
+## Sprint 3: Histórico de Doações e emissão de comprovantes
+## Sprint 4: Relatórios e Segurança
+## Sprint 5: Front-end
+## Sprint 6: Deploy e Refinamento
